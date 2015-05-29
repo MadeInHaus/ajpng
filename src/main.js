@@ -16,7 +16,7 @@ var support = require("./support-test");
 var parseAPNG = require("./parser");
 var loadUrl = require('./loader');
 
-var APNG = global.APNG = {};
+var APNG = global.AJPNG = {};
 
 APNG.checkNativeFeatures = support.checkNativeFeatures;
 APNG.ifNeeded = support.ifNeeded;
@@ -56,7 +56,7 @@ APNG.animateContext = function (url, context) {
  */
 APNG.animateImage = function (img) {
     img.setAttribute("data-is-apng", "progress");
-    return APNG.parseURL(img.src).then(
+    return APNG.parseURL(img).then(
         function (anim) {
             img.setAttribute("data-is-apng", "yes");
             var canvas = document.createElement("canvas");

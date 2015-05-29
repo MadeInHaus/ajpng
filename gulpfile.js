@@ -10,14 +10,14 @@ gulp.task('build', function () {
         .pipe(browserify())
         .pipe(uglify())
         .pipe(addsrc.prepend('./src/about.js'))
-        .pipe(concat('apng-canvas.min.js'))
-        .pipe(gulp.dest('./build/'));
+        .pipe(concat('ajpng.min.js'))
+        .pipe(gulp.dest('./test/'));
 });
 
 gulp.task('devel', function () {
     gulp.src(['./src/main.js'])
         .pipe(browserify({debug: true}))
-        .pipe(concat('apng-canvas.js'))
+        .pipe(concat('ajpng.js'))
         .pipe(gulp.dest('./test/'));
 });
 

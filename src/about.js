@@ -4,3 +4,9 @@
  * @link https://github.com/davidmz/apng-canvas
  * @license MIT
  */
+
+ /**
+ * ajpng-canvas v1.0.0
+ * @copyright 2015 Claus Wahlers, HAUS LA
+ * @license MIT
+ */

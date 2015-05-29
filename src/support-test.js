@@ -1,6 +1,7 @@
 "use strict";
 
 var Promise = Promise || require('es6-promise').Promise;
+//require('es6-promise').polyfill();
 
 var oncePromise = function (foo) {
     var promise = null;
