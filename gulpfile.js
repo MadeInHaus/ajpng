@@ -6,7 +6,7 @@ var concat = require('gulp-concat');
 
 gulp.task('prod', function () {
     gulp.src([ './index.js' ])
-        .pipe(browserify())
+        .pipe(browserify({ standalone: 'AJPNG' }))
         .pipe(uglify())
         .pipe(addsrc.prepend('./src/about.js'))
         .pipe(concat('ajpng.min.js'))
@@ -15,7 +15,7 @@ gulp.task('prod', function () {
 
 gulp.task('dev', function () {
     gulp.src([ './index.js' ])
-        .pipe(browserify({ debug: true }))
+        .pipe(browserify({ debug: true, standalone: 'AJPNG' }))
         .pipe(addsrc.prepend('./src/about.js'))
         .pipe(concat('ajpng.js'))
         .pipe(gulp.dest('./build/'));
