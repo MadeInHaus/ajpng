@@ -12,7 +12,7 @@ AJPNG is an animated image file format similar to APNG, allowing the use of _JPE
 
 Clone and install dependencies:
 
-	git clone git@github.com:MadeInHaus/ajpng.git
+	git clone https://github.com/MadeInHaus/ajpng.git
 	cd ajpng
     npm install
 
