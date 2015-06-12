@@ -21,7 +21,7 @@ var Animation = function () {
         if (played || finished) return;
         this.rewind();
         played = true;
-        requestAnimationFrame(tick);
+        tick();
     };
 
     /**

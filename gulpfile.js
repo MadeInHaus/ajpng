@@ -1,28 +1,28 @@
-var
-    gulp = require('gulp'),
-    browserify = require('gulp-browserify'),
-    uglify = require('gulp-uglify'),
-    addsrc = require('gulp-add-src'),
-    concat = require('gulp-concat');
+var gulp = require('gulp');
+var browserify = require('gulp-browserify');
+var uglify = require('gulp-uglify');
+var addsrc = require('gulp-add-src');
+var concat = require('gulp-concat');
 
-gulp.task('build', function () {
-    gulp.src(['./src/main.js'])
+gulp.task('prod', function () {
+    gulp.src([ './index.js' ])
         .pipe(browserify())
         .pipe(uglify())
         .pipe(addsrc.prepend('./src/about.js'))
         .pipe(concat('ajpng.min.js'))
-        .pipe(gulp.dest('./test/'));
+        .pipe(gulp.dest('./build/'));
 });
 
-gulp.task('devel', function () {
-    gulp.src(['./src/main.js'])
-        .pipe(browserify({debug: true}))
+gulp.task('dev', function () {
+    gulp.src([ './index.js' ])
+        .pipe(browserify({ debug: true }))
+        .pipe(addsrc.prepend('./src/about.js'))
         .pipe(concat('ajpng.js'))
-        .pipe(gulp.dest('./test/'));
+        .pipe(gulp.dest('./build/'));
 });
 
-gulp.task('watch', function () { gulp.watch('./src/*.js', ['devel']);});
+gulp.task('watch', function () {
+    gulp.watch('./src/*.js', [ 'dev' ]);
+});
 
-gulp.task('default', ['devel']);
-
-
+gulp.task('default', [ 'dev' ]);

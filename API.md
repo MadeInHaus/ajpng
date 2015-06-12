@@ -1,5 +1,7 @@
 # API
 
+_(TODO: possibly outdated)_
+
 #### APNG.ifNeeded(\[ignoreNativeAPNG boolean\])
 Checks whether there is a need to use the library.
 

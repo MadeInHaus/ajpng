@@ -8,5 +8,6 @@
  /**
  * ajpng-canvas v1.0.0
  * @copyright 2015 Claus Wahlers, HAUS LA
+ * @link https://github.com/madeinhaus/ajpng
  * @license MIT
  */

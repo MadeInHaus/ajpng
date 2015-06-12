@@ -1,16 +1,18 @@
 {
-  "name": "apng-canvas",
-  "version": "2.1.0",
-  "author": "David Mzareulyan",
-  "description": "Library for displaing animated PNG files in browsers with canvas support",
-  "keywords": [
-    "apng",
-    "animation",
-    "animated png",
-    "canvas"
-  ],
-  "homepage": "https://github.com/davidmz/apng-canvas",
+  "name": "ajpng",
+  "version": "1.0.0",
   "license": "MIT",
+  "author": "Claus Wahlers",
+  "description": "Library for rendering APNG and AJPNG files in browsers with canvas support",
+  "homepage": "https://github.com/madeinhaus/ajpng",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/madeinhaus/ajpng.git"
+  },
+  "bugs": {
+    "url": "https://github.com/madeinhaus/ajpng/issues"
+  },
   "dependencies": {
     "es6-promise": "latest"
   },
@@ -20,5 +22,12 @@
     "gulp-add-src": "~0.2.0",
     "gulp-concat": "~2.4.3",
     "gulp-browserify": "~0.5.0"
-  }
+  },
+  "keywords": [
+    "apng",
+    "ajpng",
+    "animation",
+    "animated png",
+    "canvas"
+  ]
 }
