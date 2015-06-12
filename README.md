@@ -169,3 +169,7 @@ Images are loaded using `XMLHttpRequest`, therefore, the HTML page and AJPNG ima
 Compression proxies (turbo mode in Opera, "reduce data usage" mode in mobile Chrome, etc), doesn't know about
 AJPNG format. These proxies transforms AJPNGs into static images. To prevent this for *your* images, they need to be served with 
 `Cache-Control: no-transform` HTTP header (see [big article](http://calendar.perfplanet.com/2013/mobile-isp-image-recompression/) about such proxies), or via HTTPS.
+
+## License
+
+MIT
