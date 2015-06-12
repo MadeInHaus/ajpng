@@ -8,6 +8,10 @@ Based in large parts on [apng-canvas](https://github.com/davidmz/apng-canvas).
 
 AJPNG is an animated image file format similar to APNG, allowing the use of _JPEG encoded_ animation frames with optional _PNG encoded alpha channel_. This makes it possible to create true color [Cinemagraphs](http://en.wikipedia.org/wiki/Cinemagraph) with an optional 8 bit alpha channel, using lossy compression to keep file size small.
 
+## Demo
+
+http://madeinhaus.github.io/ajpng/
+
 ## Build instructions
 
 Clone and install dependencies:
