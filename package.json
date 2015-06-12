@@ -1,6 +1,6 @@
 {
   "name": "ajpng",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "license": "MIT",
   "author": "Claus Wahlers <claus@codeazur.com.br> (http://wahlers.com.br/claus)",
   "description": "Library for rendering APNG and AJPNG files in browsers with canvas support",
