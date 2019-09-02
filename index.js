@@ -13,12 +13,13 @@
 "use strict";
 
 var Promise = Promise || require('es6-promise').Promise;
+var Map = Map || require('es6-map');
 var support = require("./src/support-test");
 var parseAPNG = require("./src/parser");
 var loadUrl = require('./src/loader');
 
 var AJPNG = {};
-var url2promise = {};
+var url2promise = new Map();
 
 AJPNG.checkNativeFeatures = support.checkNativeFeatures;
 
@@ -35,8 +36,8 @@ AJPNG.parseBuffer = function (buffer) { return parseAPNG(new Uint8Array(buffer))
  * @return {Promise}
  */
 AJPNG.parseURL = function (url) {
-    if (!(url in url2promise)) url2promise[url] = loadUrl(url).then(parseAPNG);
-    return url2promise[url];
+    if (!(url2promise.has(url))) url2promise.set(url, loadUrl(url).then(parseAPNG));
+    return url2promise.get(url);
 };
 
 /**
